@@ -19,7 +19,7 @@ module.exports = defineConfig({
   screenshotOnRunFailure: false,
   // cypress will save the video recordings if you run in headless browser only with command "npx cypress run"
   // to run in particular browser we need to use command " cypress run e2e --"
-  video: true,
+  video: false,
   videoUploadOnPasses: false,
   reporter: 'junit',
   reporterOptions: {
