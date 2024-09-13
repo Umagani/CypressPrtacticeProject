@@ -1,7 +1,6 @@
-const { defineConfig } = require('cypress')
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
-  // ✅ THE CORRECT WAY
+export default defineConfig({
 
   env: {
     username: 'umadevikonani',
@@ -27,14 +26,10 @@ module.exports = defineConfig({
     toConsole: true,
   },
 
-
-
   e2e: {
     baseUrl: 'https://rahulshettyacademy.com/seleniumPractise/#/',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.{js,jsx,ts,tsx}'
   },
-
-
 
 })

@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "es5",
+            "dom"
+        ],
+        "types": [
+            "cypress",
+            "node"
+        ]
+    },
+    "paths": {
+        "@cypress/*": [
+            "../cypress/*"
+        ],
+        "@support/*": [
+            "../cypress/support/*"
+        ],
+        "@fixtures/*": [
+            "../cypress/fixtures"
+        ],
+    },
+    "include": [
+        "cypress/**/**/*.ts",
+        "cypress/support/@DocTypes/commands.d.ts",
+        "cypress.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
