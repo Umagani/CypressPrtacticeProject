@@ -33,6 +33,19 @@ Cypress.Commands.add('GreenCartSearch', (searchText) => {
 
 });
 
+Cypress.Commands.add('CompareFruitName', (vegeName) => {
+    cy.GreenCartSearch(vegeName);
+    cy.fixture('greenCartVegetables').then((FixtureVegeName) => {
+        cy.get('[class="product"]').find('[class="product-name"]').invoke('text').then(($vegName) => {
+            let cypressGivenVegeName = $vegName.toString().trim();
+            expect(cypressGivenVegeName).to.equal(FixtureVegeName.productDeatils[0][vegeName]); // explicit
+            // or 
+            //return cypressGivenVegeName;
+        });
+    });
+
+});
+
 Cypress.Commands.add('GreenCartAddToCart', (decision) => {
     //cy.GreenCartSearch(VegeName);
     cy.get('[class="product"]').should('have.length', 1).within(() => {
@@ -62,3 +75,19 @@ Cypress.Commands.add('GreenCartAddToCart', (decision) => {
 
 });
 
+Cypress.Commands.add('ColumnCount', (selectors) => {
+    const tableSelector = `[class=${selectors}]`;
+    cy.get(tableSelector).find('thead tr td').its('length').then((tablecount) => tablecount);
+});
+
+
+Cypress.Commands.add('VegetableCostPrice', (vegetableName) => {
+    cy.GreenCartSearch(vegetableName);
+    cy.get('[class="product"] [class="product-price"]').invoke('text').then(($costPrice) => {
+        let productPrice = $costPrice.toString().trim();
+        let vegetableCost = Number(productPrice);
+        return vegetableCost;
+
+    });
+
+});

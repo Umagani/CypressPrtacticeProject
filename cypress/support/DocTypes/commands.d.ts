@@ -26,5 +26,25 @@ declare namespace Cypress {
         */
         GreenCartAddToCart(decision: string | number): Chainable<Element | number>;
 
+        /**
+       * this custom command used to compare the fruit in search bar with fixture data for Green Cart Application.
+       * @param vegeName - used to compare the vegetable item.
+       * @example cy.CompareFruitName('carrot').
+       */
+        CompareFruitName(vegeName: string): Chainable<Element>; // we ca  use
+
+        /**
+         * this custom command used to search the fruit in search bar for Green Cart Application.
+         * @param selectors - used to enter the table CSS Selector class name.
+         * @example cy.ColumnCount("cartTable").
+         */
+        ColumnCount(selectors: string): Chainable<Element>;
+
+        /**
+        * this custom command used to search the fruit in search bar for Green Cart Application.
+        * @param vegetableName - used to enter the vegetable name we want to compare.
+        * @example cy.VegetableCostPrice('carrot').
+        */
+        VegetableCostPrice(vegetableName: string): Chainable<Element>;
     }
 }
