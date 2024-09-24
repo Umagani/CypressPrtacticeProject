@@ -91,3 +91,4 @@ Cypress.Commands.add('VegetableCostPrice', (vegetableName) => {
     });
 
 });
+

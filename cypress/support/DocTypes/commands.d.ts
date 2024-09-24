@@ -46,5 +46,20 @@ declare namespace Cypress {
         * @example cy.VegetableCostPrice('carrot').
         */
         VegetableCostPrice(vegetableName: string): Chainable<Element>;
+
+
+        /**
+        * this custom command used to search the fruit in search bar for Green Cart Application.
+        * @param vegetableName - used to enter the vegetable name we want to compare.
+        * @example cy.VegetableCostPrice('carrot').
+        */
+
+        /**
+        * this custom command used to search the fruit in search bar for Green Cart Application.
+        * @param username - this is an optional parameter and user used to enter the userName  
+        * @param password - this is an optional parameter and user used to enter the password  
+        * @example cy.BasicLoginTest('username','password').
+        */
+        BasicLoginTest(username?: string, password?: string): void;
     }
 }
