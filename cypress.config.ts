@@ -8,7 +8,7 @@ export default defineConfig({
     UserName: "kumarglina@gmail.com",
     Password: "Jaisriram@1234",
   },
-
+  //experimentalSessionAndOrigin: true,
   chromeWebSecurity: false,
   viewportHeight: 1080,
   viewportWidth: 1920,
@@ -33,7 +33,9 @@ export default defineConfig({
     //baseUrl: 'https://rahulshettyacademy.com/seleniumPractise/#/',
     baseUrl: 'https://rahulshettyacademy.com/client/',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
-    supportFile: 'cypress/support/e2e.{js,jsx,ts,tsx}'
+    supportFile: 'cypress/support/e2e.{js,jsx,ts,tsx}',
+    experimentalSessionAndOrigin: true,
+
   },
 
 })
