@@ -34,8 +34,9 @@ export default defineConfig({
       // implement node event listeners here
     },
 
-    //baseUrl: 'https://rahulshettyacademy.com/seleniumPractise/#/',
-    baseUrl: 'https://rahulshettyacademy.com/client/',
+    //baseUrl: 'https://rahulshettyacademy.com/seleniumPractise/#/',   // green cart
+    baseUrl: 'https://rahulshettyacademy.com/angularpractice/',    // page Object Model
+    //baseUrl: 'https://rahulshettyacademy.com/client/',      //  login
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.{js,jsx,ts,tsx}',
     experimentalSessionAndOrigin: true,

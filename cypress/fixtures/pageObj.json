@@ -1,0 +1,12 @@
+{
+    "name": "Uma",
+    "Email": "umaTest@gmail.com",
+    "Gender1": "Female",
+    "Gender2": "Male",
+    "ProductName": [
+        "iphone X",
+        "Samsung Note 8",
+        "Nokia Edge",
+        "Blackberry"
+    ]
+}
