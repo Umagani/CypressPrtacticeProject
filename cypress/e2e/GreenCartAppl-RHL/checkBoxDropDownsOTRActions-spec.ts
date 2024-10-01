@@ -1,7 +1,9 @@
 describe('Checkboxes and DropDowns Tests', () => {
 
     beforeEach(() => {
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit(Cypress.config('baseUrl') + Cypress.env('DropDownUrl'));
+
+        //cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
     });
 
     it('learn Checkboxes ".check", ".uncheck" concepts', () => {
@@ -120,7 +122,7 @@ describe('Checkboxes and DropDowns Tests', () => {
         //  $el.scrollTop();
     });
 
-    it.only('Learn handling the web tables, sibling DOM elements of ".next()" and ".each()" ', () => {
+    it('Learn handling the web tables, sibling DOM elements of ".next()" and ".each()" ', () => {
 
         cy.get('[id="product"] tr td:nth-child(2)').each(($el, $index) => {
             const text = $el.text();

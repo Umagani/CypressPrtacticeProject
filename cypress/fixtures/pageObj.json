@@ -1,9 +1,9 @@
 {
     "name": "Uma",
-    "Email": "umaTest@gmail.com",
-    "Gender1": "Female",
-    "Gender2": "Male",
-    "ProductName": [
+    "email": "umaTest@gmail.com",
+    "gender1": "Female",
+    "gender2": "Male",
+    "productName": [
         "iphone X",
         "Samsung Note 8",
         "Nokia Edge",

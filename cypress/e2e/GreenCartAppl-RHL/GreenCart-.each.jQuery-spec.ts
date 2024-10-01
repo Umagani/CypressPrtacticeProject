@@ -1,9 +1,10 @@
 describe('Rahul Shetty test for learn .each and as and jQuery', () => {
 
-    // beforeEach(() => {
-    //     cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');
-    //     cy.get('[class="product"]').should('have.length', 30);
-    // });
+    beforeEach(() => {
+        cy.visit(Cypress.config('baseUrl') + Cypress.env('GreenCartUrl'));  // using baseUrl with environment 
+        //cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');  // url using hardcoded 
+        // cy.get('[class="product"]').should('have.length', 30);
+    });
 
     it('.each Test in Cypress Iterate every element', () => {
         cy.GreenCartSearch('Ca');
@@ -39,7 +40,7 @@ describe('Rahul Shetty test for learn .each and as and jQuery', () => {
     });
 
 
-    it.only('flipkart Test', () => {
+    it('wikipedia Test', () => {
         cy.visit('https://www.wikipedia.org/');
         cy.get('[class="other-projects"] [class="other-project"]').as('projects').should('have.length', 13);
         cy.get('@projects').each(($el) => {

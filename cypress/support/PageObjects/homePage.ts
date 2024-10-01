@@ -24,5 +24,9 @@ class HomePage {
         return cy.get('[class="navbar-nav"] li a').last().contains('Shop')
     }
 
+    getCheckbox() {
+        return cy.get('[id="exampleCheck1"]')
+    }
+
 }
 export default HomePage;

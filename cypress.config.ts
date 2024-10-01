@@ -3,7 +3,12 @@ import { defineConfig } from 'cypress'
 export default defineConfig({
 
   env: {
-    // API_URL: '',
+    // url: 'https://rahulshettyacademy.com', // one way
+
+    GreenCartUrl: "/seleniumPractise/#/",   // green cart
+    POMUrl: "/angularpractice/",    // page Object Model
+    loginUrl: "/client/",      //  login
+    DropDownUrl: "/AutomationPractice/",
 
     UserName: "kumarglina@gmail.com",
     Password: "Jaisriram@1234",
@@ -34,9 +39,7 @@ export default defineConfig({
       // implement node event listeners here
     },
 
-    //baseUrl: 'https://rahulshettyacademy.com/seleniumPractise/#/',   // green cart
-    baseUrl: 'https://rahulshettyacademy.com/angularpractice/',    // page Object Model
-    //baseUrl: 'https://rahulshettyacademy.com/client/',      //  login
+    baseUrl: 'https://rahulshettyacademy.com',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     supportFile: 'cypress/support/e2e.{js,jsx,ts,tsx}',
     experimentalSessionAndOrigin: true,

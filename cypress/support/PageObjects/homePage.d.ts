@@ -5,6 +5,7 @@ declare class HomePage {
     getGender(): Cypress.Chainable<JQuery<HTMLElement>>;
     getEntrepreneur(): Cypress.Chainable<JQuery<HTMLElement>>;
     getShopTab(): Cypress.Chainable<JQuery<HTMLElement>>;
+    getCheckbox(): Cypress.Chainable<JQuery<HTMLElement>>;
 }
 
 export default HomePage;

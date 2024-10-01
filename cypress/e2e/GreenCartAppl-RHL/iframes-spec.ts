@@ -10,7 +10,8 @@ describe('Learn handling iframes', () => {
     let searchFruitName: any;
 
     beforeEach(() => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
+        cy.visit(Cypress.config('baseUrl') + Cypress.env('DropDownUrl'));
+        //cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
     });
 
     it('learn iframe concepts', () => {

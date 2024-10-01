@@ -2,9 +2,10 @@ describe('Test with Fixtures data', () => {
     let searchFruitName: any;
 
     beforeEach(() => {
+        cy.visit(Cypress.config('baseUrl') + Cypress.env('GreenCartUrl'));
         // cy.fixture('tableDetails/columnsData').then((data) => {
         //  this.data = data;    // this will example of global variable
-        cy.visit('/');
+        //cy.visit('/');
         // });
     });
 
